@@ -4,17 +4,15 @@ import "./itemList.css";
 const ListItem = ({item, callback}) => {
     const [isButtonShowing, showButton] = useState(false);
 
-
     return (
         <div 
-            key={item.id}
             onMouseEnter={e => showButton(true)}
             onMouseLeave={e => showButton(false)}>
             <img src={item.mainImage} alt="interior"/>
             <div>{item.price}</div>
 
             {isButtonShowing && 
-                <button >I might be an invisible button</button>
+                <button onClick={e => callback(item)}>I might be an invisible button</button>
             }
         </div>
         
