@@ -1,6 +1,7 @@
 #root {
     display: flex;
     justify-content: center;
+    font-family: Arial;
 }
 
 #main {
@@ -10,6 +11,10 @@
 
 #resultsList, #savedList {
     width: 50%;
+}
+
+h1 {
+    text-align: center;
 }
 
 .item {
@@ -44,6 +49,7 @@ button {
 
 .price {
     text-align: center;
+    font-size: 1.1em;
 }
 
 .propertyId {
