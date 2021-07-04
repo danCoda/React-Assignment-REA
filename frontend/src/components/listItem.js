@@ -12,7 +12,10 @@ const ListItem = ({item, callback, buttonText}) => {
                 className="houseImg" 
                 onMouseOver={e => showButton(true)} 
                 src={item.mainImage} alt="interior"/>
-            <div>Property ID: {item.id} - {item.price}</div>
+            <div>
+                <div class="propertyId">Property ID: {item.id}</div>
+                <div class="price">{item.price}</div>
+            </div>
 
             {isButtonShowing && 
                 <button className={buttonText === "Add" ? "add" : "remove"} onClick={e => callback(item)}>{buttonText}</button>
