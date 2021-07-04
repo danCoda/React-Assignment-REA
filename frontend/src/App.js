@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import react, {useEffect, useState} from 'react';
 import Rea from './api/rea'; 
+import './style.css';
 
 import ResultsList from './components/resultsList';
 import SavedList from './components/savedList';
@@ -9,7 +10,6 @@ export default () => {
     const [propertyData, setPropertyData] = useState({});
 
     const getData = async () => {
-        console.log("Getting data!");
         const response = await Rea.get('data');
         setPropertyData(response.data);
     }
@@ -30,10 +30,10 @@ export default () => {
     if (!propertyData.results) getData();
 
     return (
-        <>
+        <div id="main">
             <ResultsList items={propertyData.results} callback={onAdd}></ResultsList>
             <SavedList items={propertyData.saved} callback={onRemove}></SavedList>
-        </>
+        </div>
     );
 }
 

@@ -1,0 +1,43 @@
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    width: 900px;
+}
+
+#resultsList, #savedList {
+    width: 50%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.houseImg {
+    width: 350px;
+}
+
+button {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.add {
+    background-color: green;
+}
+
+.remove {
+    background-color: red;
+}
