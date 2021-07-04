@@ -11,8 +11,8 @@ const ListItem = ({item, callback, buttonText}) => {
                 onMouseOver={e => showButton(true)} 
                 src={item.mainImage} alt="interior"/>
             <div>
-                <div class="propertyId">Property ID: {item.id}</div>
-                <div class="price">{item.price}</div>
+                <div className="propertyId">Property ID: {item.id}</div>
+                <div className="price">{item.price}</div>
             </div>
 
             {isButtonShowing && 
