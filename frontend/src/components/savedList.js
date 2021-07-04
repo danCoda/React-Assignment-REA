@@ -1,12 +1,19 @@
 import React from 'react';
 import ListItem from './listItem';
 
-const SavedList = (props) => {
-    console.log("Saved: ", props.items);
+const SavedList = ({ items, callback }) => {
+    const renderList = () => {
+        if (items) {
+            return items.map(item => {
+                return <ListItem item={item} callback={callback}></ListItem>
+            });
+        };
+    }
+
     return (
         <>
-            Saved:
-            <ListItem items={props.items}></ListItem>
+            Results:
+            <div>{renderList()}</div>
         </>
     )
 }

@@ -1,12 +1,19 @@
 import React from 'react';
 import ListItem from './listItem';
 
-const ResultsList = (props) => {
-    console.log("Results: ", props.items);
+const ResultsList = ({items, callback}) => {
+    const renderList = () => {
+        if (items) {
+            return items.map(item => {
+                return <ListItem item={item} callback={callback}></ListItem>
+            });
+        };
+    }
+
     return (
         <>
             Results:
-            <ListItem items={props.items}></ListItem>
+            <div>{renderList()}</div>
         </>
     )
 }

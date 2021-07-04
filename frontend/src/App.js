@@ -17,16 +17,16 @@ export default () => {
     if (!propertyData.results) getData();
 
     const onAdd = () => {
-
+        console.log("Add");
     }
     
     const onRemove = () => {
-
+        console.log("Remove");
     }
     return (
         <>
-            <ResultsList items={propertyData.results}></ResultsList>
-            <SavedList items={propertyData.saved}></SavedList>
+            <ResultsList items={propertyData.results} callback={onAdd()}></ResultsList>
+            <SavedList items={propertyData.saved} callback={onRemove()}></SavedList>
         </>
     );
 }
