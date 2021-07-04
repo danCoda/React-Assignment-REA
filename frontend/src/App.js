@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import react, {useEffect, useState} from 'react';
+import { useState } from 'react';
 import Rea from './api/rea'; 
 import './style.css';
 

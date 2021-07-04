@@ -5,7 +5,14 @@ const SavedList = ({ items, callback }) => {
     const renderList = () => {
         if (items) {
             return items.map(item => {
-                return <ListItem item={item} key={item.id} buttonText="Remove" callback={callback}></ListItem>
+                return (
+                    <ListItem 
+                        item={item} 
+                        key={item.id} 
+                        buttonText="Remove" 
+                        callback={callback}>
+                    </ListItem>
+                );
             });
         };
     }
